@@ -75,12 +75,14 @@ class ViewController: UIViewController {
     }
     
     @IBAction func rezButton(_ sender: UIButton) {
-        if flagFirstSymbol {
+        if flagFirstSymbol && firstOperand != 0 && currentNumber != 0{
             secondOperand = currentNumber
             flagFirstSymbol = false
+            flagDot = false
+            calculate(sign: operationSign)
+        } else {
+            clear()
         }
-        flagDot = false
-        calculate(sign: operationSign)
     }
     
     @IBAction func dotButton(_ sender: UIButton) {

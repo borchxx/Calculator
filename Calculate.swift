@@ -38,11 +38,15 @@ class Calculate {
     func tenToXPower(currentNumber: Float) -> Float {
         var temp: Float
         var hoarder = 1
-        for _ in 1...Int(currentNumber) {
-            hoarder *= 10
+        if currentNumber != 0{
+            for _ in 1...Int(currentNumber) {
+                       hoarder *= 10
+                   }
+                   temp = Float(hoarder)
+                   return temp
+        } else {
+            return 0
         }
-        temp = Float(hoarder)
-        return temp
     }
     
     func sqrRoot(currentNumber: Float) -> Float {
